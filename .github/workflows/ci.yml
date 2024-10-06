@@ -10,14 +10,14 @@ pull_request:
 jobs:
   build:
 
-  run-on: ubuntu-latest
+    run-on: ubuntu-latest
 
-  steps:
-  -users: action/checkout@v4
-  -name: Use Node.js
-  uses: actions/setup-node@v3
-  with:
-  node-version: '20.x'
-  -run: npm ci
-  -run: npm run build --if-present
-  -run: npm test
+    steps:
+    -users: action/checkout@v4
+    -name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20.x'
+      -run: npm ci
+    -run: npm run build --if-present
+    -run: npm test
