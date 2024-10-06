@@ -1,19 +1,19 @@
 name: DevOps Lab Exercise
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-#controsl when the workflow will run
+run-name: ${{ github.actor }} is testing out Github Actions 🚀
+#Controls when the workflow will run
 on: 
-  #triggers the wrokflow on push or pull request ecents but only fot the "main" branch
+  #Triggers the wrokflow on push or pull request events but only fot the "main" branch
   push:
     branches: [ "main" ]
   pull_request:
-    branches: [ "main"]
+    branches: [ "main" ]
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
     steps:
-      - users: actions/checkout@v4
+      - uses: actions/checkout@v4
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
